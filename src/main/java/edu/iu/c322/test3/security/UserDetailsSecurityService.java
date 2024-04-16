@@ -3,6 +3,7 @@ package edu.iu.c322.test3.security;
 
 import edu.iu.c322.test3.model.Customer;
 import edu.iu.c322.test3.repository.CustomerRepository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,6 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 
+@Primary
 @Component
 public class UserDetailsSecurityService implements UserDetailsService {
     CustomerRepository customerRepository;

@@ -3,6 +3,7 @@ package edu.iu.c322.test3.repository;
 import edu.iu.c322.test3.model.Customer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -37,9 +38,9 @@ public class CustomerRepository {
         Customer x = findByUsername(customer.getUsername());
         if(x == null) {
             Path path = Paths.get(DATABASE_NAME);
-            String data = String.format("%1$s,%2$s,%3s",
+            String data = String.format("%1$s,%2$s,%3$s",
                     customer.getUsername().trim(),
-                    customer.getUsername().trim(),
+                    customer.getPassword().trim(),
                     customer.getEmail().trim());
             data += NEW_LINE;
             Files.write(path,
