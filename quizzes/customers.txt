@@ -1,1 +1,2 @@
 username,$2a$10$bi7o/5JuIjSSzTUPfeyO4ux83KzfvXBJv84d.rqOXYpn2XPIfgW5e,email
+john,$2a$10$bpV6CGap8ftyhkWltJiJtu4XnFnaHd/motItrqum6IV2qQTXWQRhy,john@email.com
