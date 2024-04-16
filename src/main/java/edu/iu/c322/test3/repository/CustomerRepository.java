@@ -1,5 +1,6 @@
 package edu.iu.c322.test3.repository;
 
+import edu.iu.c322.test3.model.Customer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +30,7 @@ public class CustomerRepository {
         }
     }
 
-    @Override
+//    @Override
     public boolean save(Customer customer) throws IOException {
         Customer x = findByUsername(customer.getUsername());
         if(x == null) {
@@ -37,7 +38,7 @@ public class CustomerRepository {
             String data = String.format("%1$s,%2$s,%3s",
                     customer.getUsername().trim(),
                     customer.getUsername().trim(),
-                    customer.getEmail.trim());
+                    customer.getEmail().trim());
             data += NEW_LINE;
             Files.write(path,
                     data.getBytes(StandardCharsets.UTF_8),
@@ -48,7 +49,7 @@ public class CustomerRepository {
         return false;
     }
 
-    @Override
+//    @Override
     public Customer findByUsername(String username) throws IOException {
         Path path = Paths.get(DATABASE_NAME);
         List<String> data = Files.readAllLines(path);
