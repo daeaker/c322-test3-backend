@@ -3,6 +3,7 @@ package edu.iu.c322.test3.repository;
 import edu.iu.c322.test3.model.Customer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.List;
 
+@Component
 public class CustomerRepository {
     private static final Logger LOG =
             LoggerFactory.getLogger(CustomerRepository.class);
